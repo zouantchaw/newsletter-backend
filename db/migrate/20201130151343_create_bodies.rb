@@ -1,6 +1,6 @@
-class CreateHeadlines < ActiveRecord::Migration[6.0]
+class CreateBodies < ActiveRecord::Migration[6.0]
   def change
-    create_table :headlines do |t|
+    create_table :bodies do |t|
       t.string :content
       t.integer :newsletter_id
 

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :socials
+  resources :bodies
   resources :headlines
   resources :logos
   resources :newsletters
