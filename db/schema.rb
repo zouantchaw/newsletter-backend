@@ -10,6 +10,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2020_11_30_151455) do
+
+  create_table "bodies", force: :cascade do |t|
+    t.text "content"
+    t.integer "newsletter_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "headlines", force: :cascade do |t|
+    t.string "content"
+    t.integer "newsletter_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "logos", force: :cascade do |t|
+    t.string "link"
+    t.integer "newsletter_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "newsletters", force: :cascade do |t|
+    t.string "issue"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "socials", force: :cascade do |t|
+    t.string "twitter"
+    t.string "instagram"
+    t.string "youtube"
+    t.integer "newsletter_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
 end
