@@ -12,18 +12,22 @@ class NewslettersController < ApplicationController
 
     def create 
         newsletter = Newsletter.create(issue: params[:issue])
+        newsletter.create_logo(link: params[:logo][:link])
+        newsletter.create_headline(content: params[:headline][:content])
+        newsletter.create_body(content: params[:body][:content])
+        newsletter.create_social(twitter: params[:social][:twitter], instagram: params[:social][:instagram], youtube: params[:social][:youtube])
         render json: newsletter
     end
 
     # Do I need to destroy the associated data?
     def destroy
-        newsletter = bike.find_by_id(params[:id])
+        newsletter = Newsletter.find_by_id(params[:id])
         newsletter.logo.destroy
         newsletter.headline.destroy
         newsletter.body.destroy
         newsletter.social.destroy
         newsletter.destroy
-        
+
         render json: newsletter
     end
 
