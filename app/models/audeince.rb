@@ -1,0 +1,2 @@
+class Audeince < ApplicationRecord
+end

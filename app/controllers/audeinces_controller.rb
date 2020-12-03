@@ -1,0 +1,2 @@
+class AudeincesController < ApplicationController
+end

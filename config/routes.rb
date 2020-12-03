@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :audeinces
   resources :socials
   resources :bodies
   resources :headlines
