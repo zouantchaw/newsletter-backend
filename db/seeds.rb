@@ -16,7 +16,7 @@ while counter < 30 do
     nW.create_headline(content: Faker::Lorem.sentence)
     nW.create_body(content: Faker::Lorem.paragraphs(number: 15))
     nW.create_social(twitter: Faker::Internet.url, instagram: Faker::Internet.url, youtube: Faker::Internet.url)
-    Audience.create(email: Faker::Internet.email)
+    Audeince.create(email: Faker::Internet.email)
     counter += 1
 end
  
